@@ -1,0 +1,10 @@
+/* Custom Styles */
+body {
+  scroll-behavior: smooth;
+}
+.transparent-nav .nav-link {
+  color: white;
+}
+.scrolled .nav-link {
+  color: black !important;
+}
