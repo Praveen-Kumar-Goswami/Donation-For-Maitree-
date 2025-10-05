@@ -1,124 +1,254 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Donation For Maitree</title>
-  <link rel="stylesheet" href="styles.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Donation For Maitree — Donate for life</title>
+  <meta name="description" content="Donation For Maitree — saving lives through community donations, ambulance services, and medical assistance." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="icon" href="data:;base64,=">
   <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="styles.css">
 </head>
-<body class="font-sans">
+<body class="antialiased text-gray-800 bg-gray-50">
 
-  <!-- Navbar -->
-  <nav id="navbar" class="fixed w-full z-20 top-0 left-0 bg-transparent backdrop-blur-md border-b border-gray-200 transparent-nav">
-    <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
-      <a href="#" class="text-2xl font-bold text-blue-600">Donation For Maitree</a>
-      <div class="hidden md:flex space-x-8">
-        <a href="#home" class="nav-link hover:text-blue-600">Home</a>
-        <a href="#donation" class="nav-link hover:text-blue-600">Donation</a>
-        <a href="#services" class="nav-link hover:text-blue-600">Services</a>
-        <a href="#about" class="nav-link hover:text-blue-600">About</a>
+  <header id="header" class="fixed w-full z-40 top-0 left-0 transition-all">
+    <nav id="navbar" class="max-w-screen-xl mx-auto flex items-center justify-between p-4 md:p-6 bg-transparent backdrop-blur-sm rounded-b transition-colors duration-300" aria-label="Primary Navigation">
+      <a class="flex items-center gap-3" href="#home">
+        <svg class="w-8 h-8 text-blue-600" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2L3 7v7c0 5 3.8 9.7 9 11 5.2-1.3 9-6 9-11V7l-9-5z"/></svg>
+        <span class="text-lg md:text-xl font-bold text-blue-700">Donation For Maitree</span>
+      </a>
+
+      <!-- Desktop Links -->
+      <div class="hidden md:flex items-center gap-8">
+        <a class="nav-link hover:text-blue-600" href="#home">Home</a>
+        <a class="nav-link hover:text-blue-600" href="#donation">Donation</a>
+        <a class="nav-link hover:text-blue-600" href="#services">Services</a>
+        <a class="nav-link hover:text-blue-600" href="#about">About</a>
+        <a class="nav-link hover:text-blue-600" href="#contact">Contact</a>
+      </div>
+
+      <!-- Mobile Hamburger -->
+      <button id="mobileToggle" class="md:hidden p-2 rounded-lg focus:outline-none focus:ring-2" aria-expanded="false" aria-controls="mobileMenu" aria-label="Toggle menu">
+        <svg id="hamburgerIcon" class="w-7 h-7" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+      </button>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div id="mobileMenu" class="hidden md:hidden bg-white/80 backdrop-blur-sm border-t border-gray-200">
+      <div class="max-w-screen-xl mx-auto p-4 flex flex-col gap-3">
+        <a class="py-2 px-3 rounded-md nav-link block" href="#home">Home</a>
+        <a class="py-2 px-3 rounded-md nav-link block" href="#donation">Donation</a>
+        <a class="py-2 px-3 rounded-md nav-link block" href="#services">Services</a>
+        <a class="py-2 px-3 rounded-md nav-link block" href="#about">About</a>
+        <a class="py-2 px-3 rounded-md nav-link block" href="#contact">Contact</a>
       </div>
     </div>
-  </nav>
+  </header>
 
-  <!-- Hero Section -->
-  <section id="home" class="h-screen flex items-center justify-center bg-cover bg-center" style="background-image: url('https://source.unsplash.com/1600x900/?charity,help');">
-    <div class="bg-black bg-opacity-50 p-10 rounded-xl text-center">
-      <h1 class="text-4xl md:text-6xl font-bold text-white">Donation For Maitree</h1>
-      <p class="text-white mt-4 text-lg italic">Donate for life</p>
-      <a href="#donation" class="mt-6 inline-block px-6 py-3 bg-blue-600 text-white rounded-lg shadow-lg hover:bg-blue-700">Donate Now</a>
-    </div>
-  </section>
+  <main class="pt-24">
 
-  <!-- Donation Section -->
-  <section id="donation" class="py-20 bg-gray-50 text-center">
-    <h2 class="text-4xl font-bold text-blue-600">Donation</h2>
-    <p class="max-w-2xl mx-auto mt-4 text-gray-600">Support our mission by donating. 100% of your contribution goes to life-saving efforts.</p>
-    <div class="mt-10 flex flex-wrap justify-center gap-4">
-      <button class="px-6 py-3 bg-green-600 text-white rounded-lg hover:bg-green-700">Donate ₹500</button>
-      <button class="px-6 py-3 bg-green-600 text-white rounded-lg hover:bg-green-700">Donate ₹1000</button>
-      <button class="px-6 py-3 bg-green-600 text-white rounded-lg hover:bg-green-700">Custom Amount</button>
-    </div>
-  </section>
+    <!-- Hero -->
+    <section id="home" class="min-h-[72vh] grid items-center">
+      <div class="max-w-screen-xl mx-auto px-6 md:px-8">
+        <div class="grid md:grid-cols-2 gap-8 items-center">
+          <div class="hero-content space-y-6">
+            <span class="inline-block px-3 py-1 rounded-full bg-blue-50 text-blue-700 text-sm font-medium">Non-profit</span>
+            <h1 class="text-3xl md:text-5xl font-extrabold leading-tight">Donation For Maitree — <span class="text-blue-600">Donate for life</span></h1>
+            <p class="text-gray-600 max-w-xl">We provide ambulance services, medical support and awareness programs. Your donation helps save lives and build sustainable community support.</p>
 
-  <!-- Services Section -->
-  <section id="services" class="py-20">
-    <div class="max-w-screen-xl mx-auto text-center px-4">
-      <h2 class="text-4xl font-bold text-blue-600">Our Services</h2>
-      <p class="text-gray-600 mt-4">We provide essential services for those in need, including healthcare support and emergency transport.</p>
-      <div class="grid md:grid-cols-3 gap-8 mt-10">
-        <div class="bg-white p-6 rounded-xl shadow-md">
-          <h3 class="text-xl font-semibold">Emergency Ambulance</h3>
-          <p class="text-gray-600 mt-2">24/7 ambulance service to save lives in critical conditions.</p>
-        </div>
-        <div class="bg-white p-6 rounded-xl shadow-md">
-          <h3 class="text-xl font-semibold">Medical Assistance</h3>
-          <p class="text-gray-600 mt-2">We connect donors and volunteers with patients in need of medical care.</p>
-        </div>
-        <div class="bg-white p-6 rounded-xl shadow-md">
-          <h3 class="text-xl font-semibold">Awareness Programs</h3>
-          <p class="text-gray-600 mt-2">Educating communities about health, safety, and well-being.</p>
+            <div class="flex gap-3 flex-wrap">
+              <a id="donateOpen" href="#donation" class="btn-primary inline-flex items-center gap-2 px-5 py-3 rounded-lg shadow hover:shadow-md">Donate Now</a>
+              <a href="#about" class="btn-ghost inline-flex items-center gap-2 px-4 py-3 rounded-lg">Learn More</a>
+            </div>
+
+            <div class="flex items-center gap-4 text-sm text-gray-500">
+              <svg class="w-5 h-5 text-green-500" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2L3 7v7c0 5 3.8 9.7 9 11 5.2-1.3 9-6 9-11V7l-9-5z"/></svg>
+              <span>100% of donations go to our life-saving programs.</span>
+            </div>
+          </div>
+
+          <div class="relative">
+            <img src="https://source.unsplash.com/900x700/?charity,help" alt="Volunteers helping" class="rounded-2xl shadow-xl w-full object-cover max-h-[520px]" />
+            <div class="absolute left-6 bottom-6 bg-white/90 p-4 rounded-xl border shadow-sm">
+              <strong class="block text-lg text-blue-700">Emergency Ambulance</strong>
+              <span class="text-sm text-gray-600">24/7 rapid response for critical patients.</span>
+            </div>
+          </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- About Section -->
-  <section id="about" class="py-20 bg-gray-100">
-    <div class="max-w-screen-xl mx-auto text-center px-4">
-      <h2 class="text-4xl font-bold text-blue-600">About Us</h2>
-      <p class="max-w-3xl mx-auto mt-4 text-gray-600">We are a non-profit organization committed to saving lives and supporting communities in need. Through donations and partnerships, we bring hope and create sustainable solutions for the future.</p>
-    </div>
-  </section>
-
-  <!-- Advertisement Section -->
-  <section id="advertisement" class="py-20 bg-white">
-    <div class="max-w-screen-xl mx-auto text-center px-4">
-      <h2 class="text-4xl font-bold text-blue-600">Advertisements</h2>
-      <p class="text-gray-600 mt-4">Partner with us to promote your brand while supporting a noble cause.</p>
-      <div class="grid md:grid-cols-2 gap-8 mt-10">
-        <div class="p-6 border rounded-xl shadow-md">
-          <img src="https://source.unsplash.com/600x400/?business,advertisement" class="rounded-lg w-full h-60 object-cover" />
-          <h3 class="text-xl font-semibold mt-4">Corporate Partnerships</h3>
-          <p class="text-gray-600 mt-2">Work with us to make a lasting social impact.</p>
+    <!-- Donation -->
+    <section id="donation" class="py-16">
+      <div class="max-w-screen-xl mx-auto px-6 md:px-8">
+        <div class="text-center mb-8">
+          <h2 class="text-3xl md:text-4xl font-bold text-blue-600">Donation</h2>
+          <p class="text-gray-600 mt-2 max-w-2xl mx-auto">Support our mission. Choose a quick amount or enter a custom donation. Every rupee helps.</p>
         </div>
-        <div class="p-6 border rounded-xl shadow-md">
-          <img src="https://source.unsplash.com/600x400/?startup,marketing" class="rounded-lg w-full h-60 object-cover" />
-          <h3 class="text-xl font-semibold mt-4">Small Business Ads</h3>
-          <p class="text-gray-600 mt-2">Affordable ad spaces to grow your business while giving back.</p>
+
+        <div class="flex flex-col md:flex-row gap-6 items-start justify-center">
+          <div class="bg-white p-6 rounded-xl shadow-md w-full md:w-2/5">
+            <h3 class="text-xl font-semibold">Quick Donate</h3>
+            <p class="text-gray-600 text-sm mt-1">Select a preset amount</p>
+
+            <div class="mt-4 grid grid-cols-3 gap-3">
+              <button class="preset btn-amount">₹250</button>
+              <button class="preset btn-amount">₹500</button>
+              <button class="preset btn-amount">₹1000</button>
+            </div>
+
+            <div class="mt-4">
+              <label for="customAmount" class="text-sm text-gray-700">Custom Amount (₹)</label>
+              <div class="mt-2 flex gap-2">
+                <input id="customAmount" type="number" min="1" placeholder="Enter amount" class="input-basic w-full" />
+                <button id="donateBtn" class="btn-primary px-4">Donate</button>
+              </div>
+            </div>
+
+            <p class="text-xs text-gray-500 mt-3">This example does not process payments. Wire up your payment gateway (Razorpay/Stripe/Paytm) to the donate button.</p>
+          </div>
+
+          <div class="bg-white p-6 rounded-xl shadow-md w-full md:w-3/5">
+            <h3 class="text-xl font-semibold">Why your help matters</h3>
+            <ul class="mt-4 space-y-3 text-gray-600">
+              <li>• Rapid ambulance deployment for emergencies</li>
+              <li>• Medical aid and arrangement of treatments</li>
+              <li>• Community awareness and prevention programs</li>
+            </ul>
+
+            <div class="mt-6 grid md:grid-cols-3 gap-4">
+              <div class="p-4 border rounded-lg text-center">
+                <div class="text-2xl font-bold text-blue-600">24/7</div>
+                <div class="text-sm text-gray-600">Ambulance service</div>
+              </div>
+              <div class="p-4 border rounded-lg text-center">
+                <div class="text-2xl font-bold text-blue-600">100%</div>
+                <div class="text-sm text-gray-600">Funds to beneficiaries</div>
+              </div>
+              <div class="p-4 border rounded-lg text-center">
+                <div class="text-2xl font-bold text-blue-600">Trusted</div>
+                <div class="text-sm text-gray-600">Community partners</div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Footer -->
-  <footer class="bg-gray-900 text-gray-300 py-10">
-    <div class="max-w-screen-xl mx-auto grid md:grid-cols-3 gap-8 px-4">
+    <!-- Services -->
+    <section id="services" class="py-16 bg-white">
+      <div class="max-w-screen-xl mx-auto px-6 md:px-8 text-center">
+        <h2 class="text-3xl font-bold text-blue-600">Our Services</h2>
+        <p class="text-gray-600 max-w-2xl mx-auto mt-2">Helping communities through direct support and education.</p>
+
+        <div class="grid md:grid-cols-3 gap-8 mt-8">
+          <article class="p-6 bg-gray-50 rounded-xl shadow-sm">
+            <h3 class="font-semibold">Emergency Ambulance</h3>
+            <p class="text-gray-600 mt-2">Rapid transport and triage to save lives when minutes matter.</p>
+          </article>
+          <article class="p-6 bg-gray-50 rounded-xl shadow-sm">
+            <h3 class="font-semibold">Medical Assistance</h3>
+            <p class="text-gray-600 mt-2">Connecting patients with donors and hospitals for urgent care.</p>
+          </article>
+          <article class="p-6 bg-gray-50 rounded-xl shadow-sm">
+            <h3 class="font-semibold">Awareness Programs</h3>
+            <p class="text-gray-600 mt-2">Workshops and campaigns that build resilient communities.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section id="about" class="py-16">
+      <div class="max-w-screen-xl mx-auto px-6 md:px-8 text-center">
+        <h2 class="text-3xl font-bold text-blue-600">About Us</h2>
+        <p class="text-gray-600 max-w-3xl mx-auto mt-4">Donation For Maitree is a volunteer-driven non-profit focused on emergency medical services and community wellbeing. We aim to ensure help reaches those who need it most.</p>
+      </div>
+    </section>
+
+    <!-- Advertisement / Partnerships -->
+    <section id="partners" class="py-16 bg-white">
+      <div class="max-w-screen-xl mx-auto px-6 md:px-8">
+        <h2 class="text-3xl font-bold text-blue-600 text-center">Partnerships & Advertisements</h2>
+        <p class="text-gray-600 text-center mt-2">Partner with us to create impact.</p>
+
+        <div class="grid md:grid-cols-2 gap-6 mt-8">
+          <div class="p-6 border rounded-xl shadow-sm">
+            <img src="https://source.unsplash.com/800x500/?business,corporate" alt="corporate partnership" class="rounded-lg w-full h-44 object-cover" />
+            <h3 class="mt-4 font-semibold">Corporate Partnerships</h3>
+            <p class="text-gray-600 mt-1">Collaborate on CSR initiatives that deliver measurable outcomes.</p>
+          </div>
+          <div class="p-6 border rounded-xl shadow-sm">
+            <img src="https://source.unsplash.com/800x500/?startup,advertisement" alt="small business ads" class="rounded-lg w-full h-44 object-cover" />
+            <h3 class="mt-4 font-semibold">Small Business Ads</h3>
+            <p class="text-gray-600 mt-1">Affordable ad spaces to support local enterprises and our work.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="py-16 bg-gray-100">
+      <div class="max-w-screen-xl mx-auto px-6 md:px-8">
+        <div class="grid md:grid-cols-2 gap-8 items-center">
+          <div>
+            <h2 class="text-3xl font-bold text-blue-600">Get in touch</h2>
+            <p class="text-gray-600 mt-2">Questions about donations, partnerships, or volunteering? Drop us a message.</p>
+
+            <form id="contactForm" class="mt-6 space-y-4" action="#" method="post" onsubmit="event.preventDefault(); alert('This is a demo form. Replace with your backend endpoint.');">
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
+                <input name="name" required placeholder="Your name" class="input-basic" />
+                <input name="email" type="email" required placeholder="Email address" class="input-basic" />
+              </div>
+              <textarea name="message" required placeholder="How can we help?" rows="5" class="input-basic w-full"></textarea>
+              <div class="flex items-center gap-3">
+                <button type="submit" class="btn-primary px-5 py-3">Send Message</button>
+                <button type="reset" class="btn-ghost px-4 py-3">Reset</button>
+              </div>
+            </form>
+          </div>
+
+          <div class="bg-white p-6 rounded-xl shadow-md">
+            <h3 class="font-semibold">Contact Details</h3>
+            <p class="text-sm text-gray-600 mt-2">For partnerships and press, email us or use the contact form.</p>
+            <ul class="mt-4 space-y-2 text-gray-700">
+              <li><strong>Email:</strong> <a href="mailto:hello@maitree.org" class="text-blue-600">hello@maitree.org</a></li>
+              <li><strong>Phone:</strong> <a href="tel:+911234567890" class="text-blue-600">+91 12345 67890</a></li>
+              <li><strong>Address:</strong> Community Health Center, City</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="bg-gray-900 text-gray-300 py-8">
+    <div class="max-w-screen-xl mx-auto px-6 md:px-8 grid md:grid-cols-3 gap-6">
       <div>
-        <h3 class="text-white text-xl font-semibold">Donation For Maitree</h3>
-        <p class="mt-2 italic">Donate for life</p>
+        <h4 class="text-white font-semibold">Donation For Maitree</h4>
+        <p class="text-sm italic mt-2">Donate for life</p>
       </div>
       <div>
-        <h3 class="text-white text-xl font-semibold">Quick Links</h3>
-        <ul class="mt-2 space-y-2">
-          <li><a href="#home" class="hover:text-white">Home</a></li>
-          <li><a href="#donation" class="hover:text-white">Donation</a></li>
-          <li><a href="#services" class="hover:text-white">Services</a></li>
-          <li><a href="#about" class="hover:text-white">About</a></li>
+        <h4 class="text-white font-semibold">Quick Links</h4>
+        <ul class="mt-2 space-y-1 text-sm">
+          <li><a class="hover:text-white" href="#home">Home</a></li>
+          <li><a class="hover:text-white" href="#donation">Donation</a></li>
+          <li><a class="hover:text-white" href="#services">Services</a></li>
         </ul>
       </div>
       <div>
-        <h3 class="text-white text-xl font-semibold">Other Services</h3>
-        <ul class="mt-2 space-y-2">
-          <li><a href="#" class="hover:text-white">User App</a></li>
-          <li><a href="https://drive.google.com/file/d/1hoil-S03aAHnWUy0gtUdFInGVHblIeE7/view?usp=drive_link" target="_blank" class="hover:text-white">Ambulance Driver App</a></li>
+        <h4 class="text-white font-semibold">Other Services</h4>
+        <ul class="mt-2 space-y-1 text-sm">
+          <li><a class="hover:text-white" href="#">User App</a></li>
+          <li><a class="hover:text-white" href="https://drive.google.com/file/d/1hoil-S03aAHnWUy0gtUdFInGVHblIeE7/view?usp=drive_link" target="_blank" rel="noopener noreferrer">Ambulance Driver App</a></li>
         </ul>
       </div>
     </div>
-    <div class="text-center mt-10 text-gray-500">© 2025 Donation For Maitree. All Rights Reserved.</div>
+
+    <div class="text-center text-sm text-gray-500 mt-6">© 2025 Donation For Maitree. All Rights Reserved.</div>
   </footer>
 
-  <script src="script.js"></script>
+  <script src="script.js" defer></script>
 </body>
 </html>
