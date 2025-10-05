@@ -83,3 +83,13 @@ a:focus, button:focus, input:focus, textarea:focus {
 
 /* Small utility */
 .hidden-when-js { display: none; }
+#home {
+  background-attachment: fixed;
+}
+
+@media (max-width: 768px) {
+  #home {
+    background-attachment: scroll;
+  }
+}
+
